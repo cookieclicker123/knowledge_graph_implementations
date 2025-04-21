@@ -1,1 +1,11 @@
-lightrag
+# Pure python package
+lightrag-hku
+# API package
+lightrag-hku[api]
+
+# Data validation
+pydantic
+
+# Testing
+pytest
+pytest-asyncio
