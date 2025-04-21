@@ -18,6 +18,7 @@ which python3.11,12,13 #3.11>
 
 python3 -m venv .venv
 source .venv/bin/activate
+pip install --upgrade pip
 
 pip install -r NetworkX_requirements.txt
 pip install -r LightRAG_requirements.txt
@@ -25,12 +26,28 @@ pip install -r LightRAG_requirements.txt
 
 ### NetworkX
 
+```bash
+cd NetworkX
+
+python examples/01_basic_graph_creation.py
+python examples/02_basic_graph_iteration.py
+python examples/03_iteration_neighbors_copy.py
+python examples/04_graph_types_copy.py
+python examples/05_basic_algorithms.py
+# Run a simple demo to see the graphs in action on a simple but case
+python NetworkX_demo.py
+```
+
 Here are some exmaples and a demo for you to run, increasing in complexity:
 
 
 Here are the pytests to run:
 
 ### LightRAG
+
+```bash
+cd LightRAG
+```
 
 Here are some exmaples and a demo for you to run, increasing in complexity:
 
