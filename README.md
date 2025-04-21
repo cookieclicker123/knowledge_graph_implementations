@@ -65,6 +65,16 @@ pip install -e "LightRAG[test]"
 
 This command reads `LightRAG/pyproject.toml`, installs required packages like `lightrag-hku[api]` and `pytest`, and creates a link in your environment pointing to your `LightRAG` source code directory. This allows imports like `from LightRAG.models import ...` to work correctly everywhere.
 
+**Environment Variables:**
+
+Many examples require API keys or other configuration. 
+1. Navigate to the `LightRAG` directory.
+2. Copy the example environment file: `cp .env.example .env`
+3. Edit the new `.env` file and add your actual API keys (e.g., `OPENAI_API_KEY`). Ensure `OPENAI_API_BASE` is also set (usually to `https://api.openai.com/v1` for standard OpenAI).
+   *Note: The `.env` file is typically ignored by version control (add it to `.gitignore`) to keep secrets safe.*
+
+Python scripts using libraries like `python-dotenv` (which `lightrag-hku` might use internally, or you might add explicitly) can automatically load these variables. Otherwise, you might need to `export` them manually before running scripts if they don't load automatically.
+
 **Running Mocks and Tests:**
 
 To verify the basic setup and mock components:
@@ -84,8 +94,11 @@ pytest
 Example scripts demonstrating different LightRAG functionalities will be added here.
 
 ```bash
-cd LightRAG
-# python examples/01_simple_LightRAG_impl.py # (Example to be added)
+# Ensure you have set up your .env file as described above
+# Then, run examples from the root 'knowledge_graphs' directory:
+
+# Run the first simple example:
+python -m LightRAG.examples.01_simple_LightRAG_impl
 
 ```
 
