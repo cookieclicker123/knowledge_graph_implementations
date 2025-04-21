@@ -6,4 +6,6 @@ __pycache__/
 *.pyw
 *.pyz
 
-tests/fixtures
+LightRAG/examples
+LightRAG/tests/fixtures
+LightRAG/lightrag_dev.egg-info
