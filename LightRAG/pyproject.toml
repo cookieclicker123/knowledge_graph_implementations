@@ -11,6 +11,10 @@ requires-python = ">=3.9"
 dependencies = [
     "lightrag-hku[api]", # Includes base and API extras
     "pydantic>=2.0",
+    "python-dotenv>=1.0.0", # Added dependency for .env loading
+    "tiktoken>=0.7.0", # Added dependency for tokenization
+    "pipmaster", # Added internal dependency
+    "tenacity>=8.0.0", # Added retry library dependency
     # Add other core dependencies as needed
 ]
 
