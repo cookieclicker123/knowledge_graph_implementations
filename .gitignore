@@ -6,6 +6,10 @@ __pycache__/
 *.pyw
 *.pyz
 
-LightRAG/examples
+.pytest_cache
+
 LightRAG/tests/fixtures
 LightRAG/lightrag_dev.egg-info
+
+.env
+tmp
