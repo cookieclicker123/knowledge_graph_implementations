@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightrag_dev"
+version = "0.0.1"
+description = "Development package for LightRAG examples and tests."
+readme = "README.md" # Optional: if you have a README
+requires-python = ">=3.9"
+dependencies = [
+    "lightrag-hku[api]", # Includes base and API extras
+    "pydantic>=2.0",
+    # Add other core dependencies as needed
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    # Add other testing dependencies here
+]
+
+[tool.setuptools.packages.find]
+where = ["."] # Tells setuptools the package source is in the current directory
+include = ["LightRAG*"] # Finds the LightRAG package
+# We might want to include tests if we want to run them after installation elsewhere
+# exclude = ["LightRAG.tests*"] 
