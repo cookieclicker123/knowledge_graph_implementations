@@ -15,6 +15,7 @@ dependencies = [
     "tiktoken>=0.7.0", # Added dependency for tokenization
     "pipmaster", # Added internal dependency
     "tenacity>=8.0.0", # Added retry library dependency
+    "PyMuPDF>=1.25.5", # Added dependency for PDF processing
     # Add other core dependencies as needed
 ]
 
