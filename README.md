@@ -100,6 +100,30 @@ Example scripts demonstrating different LightRAG functionalities will be added h
 # Run the first simple example:
 python -m LightRAG.examples.01_simple_LightRAG_impl
 
+# Run the second example (processing a text document):
+python -m LightRAG.examples.02_document_LightRAG_impl
+
+# Run the third example (processing pre-parsed PDF text):
+# Note: Requires 01_basic_pymupdf_parser.py to be run first.
+python -m LightRAG.examples.03_pdf_LightRAG_impl
 ```
+
+## Parsing Document Examples
+
+This section contains scripts focused specifically on parsing documents (like PDFs) using different methods before potentially feeding them into a RAG system like LightRAG. The goal is to compare the outputs and complexities of various parsing techniques.
+
+Parsed outputs will typically be saved in `LightRAG/tmp/pdf_parsing_outputs/`.
+
+**1. Basic PyMuPDF Text Extraction:**
+
+This script uses the `PyMuPDF` library (`fitz`) to perform basic text extraction from the `light_rag.pdf` file. It extracts plain text content page by page.
+
+```bash
+# Ensure PyMuPDF is installed (see LightRAG_requirements.txt)
+# Run from the root 'knowledge_graphs' directory:
+python -m LightRAG.examples.parsing_documents_examples.01_basic_pymupdf_parser
+```
+
+*(More parsing examples comparing different methods will be added here)*
 
 
