@@ -1,0 +1,30 @@
+# Sample Document for LightRAG Example 02
+
+## Introduction
+
+This document serves as a sample input for the second LightRAG example. 
+The purpose is to demonstrate processing text content read directly from a file,
+rather than using a hardcoded string within the script.
+
+## Key Concepts
+
+The core idea remains Retrieval-Augmented Generation (RAG). We still leverage 
+an embedding model (like OpenAI's) to represent the text numerically and an 
+LLM (like GPT-4o Mini) to generate answers based on retrieved context.
+
+LightRAG helps orchestrate this process, managing storage, retrieval, and generation.
+It uses components like Vector Databases (e.g., NanoVectorDB for local storage) 
+and potentially Knowledge Graphs to structure and access information efficiently.
+
+## Processing Steps (Conceptual)
+
+1.  **Read:** The script will open and read the entire content of this `.txt` file.
+2.  **Insert:** The read text will be passed to `rag.ainsert()`. LightRAG internally handles chunking, embedding, entity/relationship extraction (if configured), and storage.
+3.  **Store:** Data (embeddings, chunks, metadata) will be saved in a specific working directory (`LightRAG/tmp/lightrag_data/02_document_example/`).
+4.  **Query:** A user query will be embedded.
+5.  **Retrieve:** Relevant chunks/entities will be retrieved from the stored data based on the query embedding.
+6.  **Generate:** The LLM will use the retrieved context and the original query to generate a final answer.
+
+## Conclusion
+
+This simple text file allows us to test the file reading and processing pipeline before moving on to more complex formats like PDF. 
